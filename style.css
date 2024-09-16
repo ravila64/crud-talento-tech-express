@@ -1,0 +1,169 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;   /* 600px*/
+    min-width: 320px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 75%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 15px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+}
+
+.actions button {
+    margin: 0 5px;
+    padding: 7px 12px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.actions .edit {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.actions .turno {
+    background-color: #dc3545;
+    color: #fff;
+    font-family: roboto;
+    font-size: 20px;
+}
+
+.actions .edit:hover {
+    background-color: #1436cc;
+}
+
+.actions .turno:hover {
+    background-color: #eb7507;
+    color:black;
+}
+
+/* desde js fecha en h2*/
+/* h2 #fecha{
+    background-color: #1c60dd;
+    padding: 12px;
+    border-radius: 5px;
+    color: white;
+} */
+
+.cont-logo{
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    border:2px solid #086fc9;
+    border-radius: 5px;
+    margin: 5px 10px 5px 10px;
+}
+
+.cont-fecha{
+    display: flexbox;
+    justify-content: space-between;
+}
+
+.logo{
+   width: 180px;
+   margin-right: 20px;
+}
+
+.reg-personal{
+    font-size: 25px;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.btn-fecha{
+    color: white;
+    padding: 10px;
+}
+
+.modal {
+    display: none; /* Ocultar el modal por defecto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+  }
+
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: black;
+    cursor: pointer;
+}
+    

@@ -1,0 +1,58 @@
+//-- Migrations will appear here as you chat with AI
+
+// pagina logos
+https://studio.tailorbrands.com/boarding/124229814/offer
+
+// algunos colores pastel
+https://es.venngage.com/blog/paletas-de-colores-pastel/#d
+// generador de colores
+https://venngage.com/tools/accessible-color-palette-generator
+
+
+// por favor copiar estos items faltantes
+// OK 1. logo.  ***
+// OK 2. no eliminar, colocar boton "Turno" color = Lorena
+// 3. manejar la validacion de email, que no repita  = Paula, Lorena
+// OK 4. colocar en camelCase ** RENE 
+// 5. hacer el readme.md.  ** Jorge, David
+// OK 6. cambio de nombre o email, salga ventana modal, no utilizar prompt  ** David Santiago
+// 7. grabar datos localstorage o en un archivo tipo json ** RENE
+// 8. si alcanza tiempo manejar filtros
+// 9. colocar el reloj que vaya cambiando cada 5 segundos, sI hay tiempo
+// a. diseño responsivo
+
+{
+  'id':121213,
+  'nombre':'juan',
+  'email':'juan@algo.com'
+}
+
+create table medicos (
+  id bigint primary key generated always as identity,
+  nombre text not null,
+  email text not null unique
+);
+
+alter table medicos
+add column fecha timestamp with time zone default now();
+
+alter table medicos
+alter column fecha
+set not null;
+
+alter table medicos
+add column activo boolean default true;
+
+
+// generador bases de datos gratis
+https://www.youtube.com/watch?v=QVpxZyI1Iqk
+//Este Generador de Bases de Datos GRATIS es una LOCURA
+
+pagina se llama
+https://postgres.new/db/ft8kw2xebieerdtk
+sign in con github
+
+
+usuario Santiag328  davidboyaca@gmail.com
+usuario goyitoyoyo  joralbleaoso@gmail.com
+https://github.com/Goyitoyoyo
