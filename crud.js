@@ -10,7 +10,7 @@ document.getElementById("medicoForm").addEventListener("submit", function (e) {
 
 let currentRow; // Fila actual que se está editando
 
-function addMedico(nombre, email, fecha) {
+export function addMedico(nombre, email, fecha) {
   const table = document.getElementById("medicoList");
   const row = document.createElement("tr");
   nombre = converterToCamelCase(nombre);
@@ -26,14 +26,12 @@ function addMedico(nombre, email, fecha) {
   table.appendChild(row);
 }
 
-function openModal(event) {
+export function openModal(event) {
   const row = event.parentElement.parentElement;
   currentRow = row; // Guarda la fila actual
-
   // Cargar los datos actuales en los campos de la ventana modal
   document.getElementById("editNombre").value = row.children[0].textContent;
   document.getElementById("editEmail").value = row.children[1].textContent;
-
   // Mostrar la ventana modal
   document.getElementById("editModal").style.display = "block";
 }
@@ -42,26 +40,23 @@ document.getElementById("saveEditBtn").addEventListener("click", function () {
   // Obtener los valores actualizados desde la ventana modal
   const nuevoNombre = document.getElementById("editNombre").value;
   const nuevoEmail = document.getElementById("editEmail").value;
-
   // Validar el nuevo email
   if (!validateEmail(nuevoEmail)) {
     alert("Por favor ingrese un email válido.");
     return;
   }
-
   // Actualizar la fila con los nuevos valores
   currentRow.children[0].textContent = converterToCamelCase(nuevoNombre);
   currentRow.children[1].textContent = nuevoEmail;
-
   // Cerrar la ventana modal
   closeModal();
 });
 
-function closeModal() {
+export function closeModal() {
   document.getElementById("editModal").style.display = "none";
 }
 
-function turnoMedico(event) {
+export function turnoMedico(event) {
   const row = event.parentElement.parentElement;
   console.log(" row ", row);
   const button = event; // El botón clickeado
@@ -87,7 +82,7 @@ function turnoMedico(event) {
 }
 
 // convierte el nombre a Camel Case
-function converterToCamelCase(texto) {
+export function converterToCamelCase(texto) {
   let str = "";
   let blanco = false;
   for (let i = 0; i < texto.length; i++) {
@@ -107,14 +102,14 @@ function converterToCamelCase(texto) {
   return str;
 }
 
-function fechaHora() {
+export function fechaHora() {
   let date = new Date().toString();
   let pos = date.indexOf("GMT");
   date = date.substring(0, pos);
   return date;
 }
 
-function displayDate() {
+export function displayDate() {
   let fDateTime = fechaHora();
   let h2Fecha = document.getElementById("fecha");
   h2Fecha.innerHTML = fDateTime; //Date().toString();
@@ -127,7 +122,7 @@ function displayDate() {
 }
 
 // Función para validar el formato del email
-function validateEmail(email) {
+export function validateEmail(email) {
   const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return re.test(String(email).toLowerCase());
 }
